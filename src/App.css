@@ -1,13 +1,48 @@
-#root {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
+* {
+  box-sizing: border-box;
 }
 
-/* #canvas-main { */
-/*   width: 100% !important; */
-/*   height: 100% !important; */
-/* } */
+html,
+body,
+#root,
+.scroll {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* user-select: none; */
+  overflow: hidden;
+  font-family: Tahoma, sans-serif;
+}
+
+#root {
+  overflow: auto;
+}
+
+.scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.dot {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 50px;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  background-color: #000000;
+  font-family: 'Inter var', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
