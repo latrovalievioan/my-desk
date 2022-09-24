@@ -60,4 +60,5 @@
   justify-content: flex-start;
   align-items: center;
   animation: arrow 2s ease-in-out infinite;
+  transition: opacity 0.4s;
 }

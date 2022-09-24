@@ -31,10 +31,8 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-
   height: 100%;
   width: 100%;
-
   padding: 50px;
 }
 
@@ -45,4 +43,16 @@ body {
   background-color: #000000;
   font-family: 'Inter var', sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.glassMorphic {
+  background: red;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 70, 70, 0.4) 0%,
+    rgba(94, 128, 215, 0.4) 100%
+  );
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 4em;
 }
