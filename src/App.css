@@ -4,8 +4,7 @@
 
 html,
 body,
-#root,
-.scroll {
+#root {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -13,27 +12,11 @@ body,
   /* user-select: none; */
   overflow: hidden;
   font-family: Tahoma, sans-serif;
+  color: white;
 }
 
 #root {
   overflow: auto;
-}
-
-.scroll {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
-}
-
-.dot {
-  display: inline-block;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  padding: 50px;
 }
 
 body {
@@ -43,16 +26,4 @@ body {
   background-color: #000000;
   font-family: 'Inter var', sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-.glassMorphic {
-  background: red;
-  background: linear-gradient(
-    180deg,
-    rgba(248, 70, 70, 0.4) 0%,
-    rgba(94, 128, 215, 0.4) 100%
-  );
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(6px);
-  border-radius: 4em;
 }

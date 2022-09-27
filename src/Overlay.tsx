@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react';
 import { About } from './sections/About';
 import { Home } from './sections/Home';
+import { Scroll } from './styled/Scroll';
 const Overlay = forwardRef(({ scroll }: { scroll: any }, ref: any) => {
   const scrollHelperRef = React.useRef<any>();
 
   return (
-    <div
+    <Scroll
       ref={ref}
       onScroll={(e: any) => {
         scroll.current =
@@ -14,7 +15,6 @@ const Overlay = forwardRef(({ scroll }: { scroll: any }, ref: any) => {
           scrollHelperRef.current.style.opacity = '0';
         else scrollHelperRef.current.style.opacity = '1';
       }}
-      className="scroll"
     >
       <Home ref={scrollHelperRef} />
       <About />
@@ -38,7 +38,7 @@ const Overlay = forwardRef(({ scroll }: { scroll: any }, ref: any) => {
           <h1>Credits</h1>
         </div>
       </div>
-    </div>
+    </Scroll>
   );
 });
 
