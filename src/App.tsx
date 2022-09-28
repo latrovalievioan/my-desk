@@ -5,8 +5,11 @@ import Overlay from './Overlay';
 import { Model } from './Desk';
 
 function App() {
+  const [haveAssetsLoaded, setHaveAssetsLoaded] = React.useState(false);
+
   const overlay = React.useRef();
   const scroll = React.useRef(0);
+
   return (
     <>
       <Canvas
@@ -17,10 +20,10 @@ function App() {
         }}
       >
         <Suspense fallback={null}>
-          <Model scroll={scroll} />
+          <Model scroll={scroll} setHaveAssetsLoaded={setHaveAssetsLoaded} />
         </Suspense>
       </Canvas>
-      <Overlay ref={overlay} scroll={scroll} />
+      <Overlay ref={overlay} scroll={scroll} haveAssetsLoaded={haveAssetsLoaded}/>
     </>
   );
 }
