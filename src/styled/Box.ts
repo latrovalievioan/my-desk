@@ -9,6 +9,6 @@ export const Box = styled.div`
   width: 100%;
   padding: 50px;
   position: relative;
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
   justify-content: center;
 `;
