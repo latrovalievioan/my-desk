@@ -10,4 +10,5 @@ export const Box = styled.div`
   padding: 50px;
   position: relative;
   border: 1px solid yellow;
+  justify-content: center;
 `;

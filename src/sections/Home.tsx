@@ -1,16 +1,15 @@
 import React, { forwardRef } from 'react';
 import { ScrollTooltip } from '../styled/ScrollTooltip';
-import { SectionWrapper } from '../styled/SectionWrapper';
-import { SmallestTitle } from '../styled/Subtitle';
+import { Box } from '../styled/Box';
+import { SmallestTitle } from '../styled/SmallestTitle';
 import { Title } from '../styled/Title';
 import PointDownIcon from './icons/PointDownIcon';
 import styled from 'styled-components';
+import { Stack } from '../styled/Stack';
 
-const TitlesWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+const TitlesStack = styled(Stack)`
   justify-items: flex-start;
-  margin-top: 20vh;
+  margin-bottom: 30vh;
 `;
 
 const ColoredTitle = styled(Title)`
@@ -26,15 +25,15 @@ const ColoredTitle = styled(Title)`
 
 export const Home = forwardRef(({ ...props }, ref: any) => {
   return (
-    <SectionWrapper>
-      <TitlesWrapper>
+    <Box>
+      <TitlesStack>
         <SmallestTitle>Welcome to</SmallestTitle>
         <ColoredTitle>IOAN'S DESK</ColoredTitle>
-      </TitlesWrapper>
+      </TitlesStack>
       <ScrollTooltip ref={ref}>
         scroll down
         <PointDownIcon />
       </ScrollTooltip>
-    </SectionWrapper>
+    </Box>
   );
 });
