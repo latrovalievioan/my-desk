@@ -4,6 +4,7 @@ import { Box } from '../styled/Box';
 import { Cluster } from '../styled/Cluster';
 import { Stack } from '../styled/Stack';
 import { Title } from '../styled/Title';
+import { ProjectCard } from './components/ProjectCard';
 
 export const Projects = forwardRef(({ ...props }, ref: any) => {
   const ProjectsCluster = styled(Cluster)`
@@ -16,60 +17,35 @@ export const Projects = forwardRef(({ ...props }, ref: any) => {
     padding: 0;
   `;
 
-  const Card = styled(Box)`
-    flex: 1 1 33%;
-    text-align: left;
-    align-items: flex-start;
-    min-width: 300px;
-    max-width: 300px;
+  const Button = styled.a`
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5em;
+    padding: 20px;
+    margin-top: 2em;
+    background-color: rgba(255, 165, 0, 0.5);
     width: 300px;
-    height: 300px;
-  `;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
 
-  const GlassCard1 = styled(Card)`
-    background: linear-gradient(
-      180deg,
-      rgba(135, 255, 190, 0.4) 0%,
-      rgba(255, 239, 152, 0.4) 100%
-    );
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-
-    border-radius: 2em;
-  `;
-
-  const GlassCard2 = styled(Card)`
-    background: linear-gradient(
-      180deg,
-      rgba(255, 233, 153, 0.4) 0%,
-      rgba(255, 122, 154, 0.4) 100%
-    );
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-radius: 2em;
-  `;
-
-  const GlassCard3 = styled(Card)`
-    background: linear-gradient(
-      180deg,
-      rgba(255, 163, 163, 0.4) 0%,
-      rgba(136, 225, 244, 0.4) 100%
-    );
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-
-    border-radius: 2em;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 165, 0, 0.7);
+    }
   `;
 
   return (
     <Box>
       <ProjectsStack>
-        <Title>Projects</Title>
+        <Title>PROJECTS</Title>
         <ProjectsCluster>
-          <GlassCard1></GlassCard1>
-          <GlassCard2></GlassCard2>
-          <GlassCard3></GlassCard3>
+          <ProjectCard cardStyle={1} />
+          <ProjectCard cardStyle={2} />
+          <ProjectCard cardStyle={3} />
         </ProjectsCluster>
+        <Button href="https://github.com/latrovalievioan">View all my projects on GitHub</Button>
       </ProjectsStack>
     </Box>
   );

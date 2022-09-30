@@ -23,7 +23,7 @@ body {
   position: fixed;
   overflow: hidden;
   overscroll-behavior-y: none;
-  background-color: #000000;
+  background-color: #0c030c;
   font-family: 'Inter var', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
