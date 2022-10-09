@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bedrock-layout/primitives": "^2.2.0",
     "@react-three/drei": "^9.31.1",
     "@react-three/fiber": "^8.7.4",
     "@types/styled-components": "^5.1.26",
