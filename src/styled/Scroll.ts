@@ -6,7 +6,6 @@ export const Scroll = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: Tahoma, sans-serif;
   color: white;
   position: absolute;
   top: 0;
