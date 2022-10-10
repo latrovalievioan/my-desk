@@ -18,7 +18,7 @@ const SkillsCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 1000px;
 `;
 
 const SkillTitle = styled.h3`
@@ -31,29 +31,24 @@ export const Skills = () => {
       <ContentStack>
         <h1>SKILLS</h1>
         <SkillsCard>
-          <SkillTitle>Front end</SkillTitle>
+          <SkillTitle>Front-end</SkillTitle>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            egestas ligula id turpis molestie accumsan. Praesent et porttitor
-            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+            As a front-end developer, I am pretty proficient in <b>JavaScript</b>,
+            <b> HTML5</b>, and <b>CSS</b>. I have been in love with <b>TypeScript </b>ever since I
+            discovered it. It's a pleasure to have static types! I am a <b>React </b>
+            fan and try to learn more about it every day.
           </p>
           <SkillTitle>Version control</SkillTitle>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            egestas ligula id turpis molestie accumsan. Praesent et porttitor
-            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+            I am very knowledgeable about <b>Git</b>. And my branches are never a mess.
+            I'm comfortable rebasing, using the 'reflog', cherry-picking
+            commits, and anything you can think of. People often think of you as
+            a wizard if you are good at Git. So git gut at Git!
           </p>
-          <SkillTitle>Problem solving</SkillTitle>
+          <SkillTitle>Back-end</SkillTitle>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            egestas ligula id turpis molestie accumsan. Praesent et porttitor
-            velit. Vivamus in purus luctus, porta purus in, porta nibh.
-          </p>
-          <SkillTitle>Back end</SkillTitle>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            egestas ligula id turpis molestie accumsan. Praesent et porttitor
-            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+            Although it is not my prime field, I've written some back-end APIs.
+            My knowledge of <b>NestJS </b>and <b>Ruby on Rails</b> is relatively good.
           </p>
         </SkillsCard>
       </ContentStack>
