@@ -1,50 +1,62 @@
-import { Box } from '../styled/Box';
 import styled from 'styled-components';
-import { Cluster } from '../styled/Cluster';
+import { Section } from '../styled/Section';
+
+const ContentStack = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const SkillsCard = styled.div`
+  background: linear-gradient(
+    90deg,
+    rgba(41, 163, 232, 0.4) 0%,
+    rgba(104, 215, 94, 0.4) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  padding: 30px 40px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1100px;
+`;
+
+const SkillTitle = styled.h3`
+  border-bottom: 3px solid white;
+`;
 
 export const Skills = () => {
-  const SectionCluster = styled(Cluster)`
-    gap: 4em;
-    width: 90%;
-    min-height: 75%;
-  `;
-
-  const Card = styled(Box)`
-    border-radius: 4em;
-    flex: 1 1 25%;
-    text-align: left;
-    align-items: flex-start;
-    min-width: 400px;
-  `;
-
-  const GlassCard1 = styled(Card)`
-    background: linear-gradient(
-      180deg,
-      rgba(115, 194, 211, 0.4) 0%,
-      rgba(215, 188, 94, 0.4) 100%
-    );
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    border-radius: 60px;
-  `;
-
-  const GlassCard2 = styled(Card)`
-    background: linear-gradient(
-      180deg,
-      rgba(248, 70, 70, 0.4) 0%,
-      rgba(94, 128, 215, 0.4) 100%
-    );
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    border-radius: 60px;
-  `;
-
   return (
-    <Box>
-      <SectionCluster>
-        <GlassCard1></GlassCard1>
-        <GlassCard2></GlassCard2>
-      </SectionCluster>
-    </Box>
+    <Section>
+      <ContentStack>
+        <h1>SKILLS</h1>
+        <SkillsCard>
+          <SkillTitle>Front end</SkillTitle>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            egestas ligula id turpis molestie accumsan. Praesent et porttitor
+            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+          </p>
+          <SkillTitle>Version control</SkillTitle>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            egestas ligula id turpis molestie accumsan. Praesent et porttitor
+            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+          </p>
+          <SkillTitle>Problem solving</SkillTitle>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            egestas ligula id turpis molestie accumsan. Praesent et porttitor
+            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+          </p>
+          <SkillTitle>Back end</SkillTitle>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            egestas ligula id turpis molestie accumsan. Praesent et porttitor
+            velit. Vivamus in purus luctus, porta purus in, porta nibh.
+          </p>
+        </SkillsCard>
+      </ContentStack>
+    </Section>
   );
 };

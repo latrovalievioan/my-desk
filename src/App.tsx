@@ -1,8 +1,8 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import React, { Suspense } from 'react';
-import './App.css';
 import Overlay from './Overlay';
 import { Model } from './Desk';
+import {GlobalStyles} from './GlobalStyles';
 
 function App() {
   const [haveAssetsLoaded, setHaveAssetsLoaded] = React.useState(false);
@@ -12,6 +12,7 @@ function App() {
 
   return (
     <>
+      <GlobalStyles/>
       <Canvas
         id="canvas-main"
         onCreated={(state) => {
