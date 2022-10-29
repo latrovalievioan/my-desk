@@ -49,7 +49,11 @@ const ProjectTitle = styled.h3`
 `;
 
 const Button = styled.a`
-  background: linear-gradient(90deg, rgba(255, 190, 115, 0.6) 0%, rgba(252, 183, 7, 0.6) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 190, 115, 0.6) 0%,
+    rgba(252, 183, 7, 0.6) 100%
+  );
   backdrop-filter: blur(13.9919px);
   border-radius: 47px;
   font-weight: 700;
@@ -66,7 +70,11 @@ const Button = styled.a`
   text-decoration: none;
 
   &:hover {
-    background: linear-gradient(90deg, rgba(255, 190, 115, 0.8) 0%, rgba(252, 183, 7, 0.8) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 190, 115, 0.8) 0%,
+      rgba(252, 183, 7, 0.8) 100%
+    );
   }
 `;
 
@@ -77,37 +85,46 @@ export const Projects = () => {
         <h1>PROJECTS</h1>
         <CardsCluster>
           <Project1>
-            <ProjectTitle>Project 1</ProjectTitle>
+            <ProjectTitle>my-desk</ProjectTitle>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel
-              sapien diam. Vestibulum at sapien quis tortor rhoncus dictum
-              faucibus ac diam. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. In vel sapien diam. Vestibulum at sapien quis
-              tortor rhoncus dictum faucibus ac diam.
+              This is the project that you are currently viewing. I took
+              inspiration from similar personal dev websites built with
+              THREE.js, so I was pretty excited to try it on my own.{' '}
+            </p>
+            <p>
+              I've used <b>React</b> with <b>TypeScript</b>,{' '}
+              <b>Styled Components</b>, and <b>React three fiber</b>. I've had to
+              learn some basic <b>Blender</b> for the models too.
             </p>
           </Project1>
           <Project2>
-            <ProjectTitle>Project 1</ProjectTitle>
+            <ProjectTitle>ts-UwU</ProjectTitle>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel
-              sapien diam. Vestibulum at sapien quis tortor rhoncus dictum
-              faucibus ac diam. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. In vel sapien diam. Vestibulum at sapien quis
-              tortor rhoncus dictum faucibus ac diam.
+              This project is a space for experiments with <b>TypeScript</b>
+              's type system. It's a pretty weird concept to grasp, but It's
+              something like functional programming only using types.
+            </p>
+            <p>
+              I did a presentation on the concept at a tech meeting,
+              and it went pretty amazing.
             </p>
           </Project2>
           <Project3>
-            <ProjectTitle>Project 1</ProjectTitle>
+            <ProjectTitle>Smule's profile page</ProjectTitle>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel
-              sapien diam. Vestibulum at sapien quis tortor rhoncus dictum
-              faucibus ac diam. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. In vel sapien diam. Vestibulum at sapien quis
-              tortor rhoncus dictum faucibus ac diam.
+              This is a project that I single-handedly did at work. It's
+              Smule's website profile page.
+            </p>
+            <p>
+              This was one of my first big real-world challenges, and I
+              learned a lot about <b>React</b>, <b>Redux</b>, and{' '}
+              <b>Styled Components</b> in the process.
             </p>
           </Project3>
         </CardsCluster>
-        <Button href="https://www.github.com/latrovalievioan" target="_blank">View all projects on GitHub</Button>
+        <Button href="https://www.github.com/latrovalievioan" target="_blank">
+          View all projects on GitHub
+        </Button>
       </ContentStack>
     </Section>
   );
