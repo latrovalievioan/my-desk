@@ -5,6 +5,7 @@ import { Scroll } from './styled/Scroll';
 import { Projects } from './sections/Projects';
 import { Skills } from './sections/Skills';
 import { LoadingBar } from './LoadingBar';
+import { Contacts } from './sections/Contacts';
 
 const Overlay = forwardRef(
   (
@@ -29,11 +30,7 @@ const Overlay = forwardRef(
             <About />
             <Skills />
             <Projects />
-            <div style={{ height: '100vh', border: '1px solid red' }}>
-              <div className="dot">
-                <h1>Contact</h1>
-              </div>
-            </div>
+            <Contacts />
             <div style={{ height: '100vh', border: '1px solid red' }}>
               <div className="dot">
                 <h1>Credits</h1>
