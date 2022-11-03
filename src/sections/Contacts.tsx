@@ -53,6 +53,7 @@ const ContentStack = styled.div`
     }
     label {
       margin-top: 1rem;
+      margin-bottom: 2px;
     }
     input[type="submit"] {
       margin-top: 2rem;
