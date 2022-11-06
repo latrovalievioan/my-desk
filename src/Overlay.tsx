@@ -6,6 +6,7 @@ import { Projects } from './sections/Projects';
 import { Skills } from './sections/Skills';
 import { LoadingBar } from './LoadingBar';
 import { Contacts } from './sections/Contacts';
+import { Icons } from './Icons';
 
 const Overlay = forwardRef(
   (
@@ -26,6 +27,7 @@ const Overlay = forwardRef(
       >
         {haveAssetsLoaded ? (
           <>
+            <Icons />
             <Home ref={scrollHelperRef} />
             <About />
             <Skills />
