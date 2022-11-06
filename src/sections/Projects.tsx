@@ -54,11 +54,7 @@ const ProjectTitle = styled.h3`
 `;
 
 const Button = styled.a`
-  background: linear-gradient(
-    90deg,
-    rgba(255, 190, 115, 0.6) 0%,
-    rgba(252, 183, 7, 0.6) 100%
-  );
+  background: rgba(249, 105, 14, 0.8);
   backdrop-filter: blur(13.9919px);
   border-radius: 47px;
   font-weight: 700;
@@ -75,11 +71,8 @@ const Button = styled.a`
   text-decoration: none;
 
   &:hover {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 190, 115, 0.8) 0%,
-      rgba(252, 183, 7, 0.8) 100%
-    );
+    transition: 0.5s;
+    background: rgba(0, 206, 158, 0.6);
   }
 `;
 
