@@ -2,17 +2,21 @@ import { Canvas, useThree } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 import Overlay from './Overlay';
 import { Model } from './Desk';
-import {GlobalStyles} from './GlobalStyles';
+import { GlobalStyles } from './GlobalStyles';
+import { useIsDesktop } from './utils';
 
 function App() {
   const [haveAssetsLoaded, setHaveAssetsLoaded] = React.useState(false);
 
+  const isDesktop = useIsDesktop();
+
   const overlay = React.useRef();
   const scroll = React.useRef(0);
 
-  return (
+  return isDesktop 
+    ? (
     <>
-      <GlobalStyles/>
+      <GlobalStyles />
       <Canvas
         id="canvas-main"
         onCreated={(state) => {
@@ -24,9 +28,14 @@ function App() {
           <Model scroll={scroll} setHaveAssetsLoaded={setHaveAssetsLoaded} />
         </Suspense>
       </Canvas>
-      <Overlay ref={overlay} scroll={scroll} haveAssetsLoaded={haveAssetsLoaded}/>
+      <Overlay
+        ref={overlay}
+        scroll={scroll}
+        haveAssetsLoaded={haveAssetsLoaded}
+      />
     </>
-  );
+    )
+    : <div>HELLO</div>
 }
 
 export default App;
