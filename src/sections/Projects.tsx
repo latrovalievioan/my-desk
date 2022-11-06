@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Section } from '../styled/Section';
+import Tilt from 'react-parallax-tilt';
 
 const ContentStack = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const CardsCluster = styled.div`
   gap: 50px;
 `;
 
-const Card = styled.div`
+const Card = styled(Tilt)`
   backdrop-filter: blur(10px);
   border-radius: 60px;
   padding: 30px;
@@ -84,7 +85,7 @@ export const Projects = () => {
       <ContentStack>
         <h1>PROJECTS</h1>
         <CardsCluster>
-          <Project1>
+          <Project1 tiltReverse tiltMaxAngleX={8} tiltMaxAngleY={8}>
             <ProjectTitle>my-desk</ProjectTitle>
             <p>
               This is the project that you are currently viewing. I took
@@ -97,7 +98,7 @@ export const Projects = () => {
               learn some basic <b>Blender</b> for the models too.
             </p>
           </Project1>
-          <Project2>
+          <Project2 tiltReverse tiltMaxAngleX={8} tiltMaxAngleY={8}>
             <ProjectTitle>ts-UwU</ProjectTitle>
             <p>
               This project is a space for experiments with <b>TypeScript</b>
@@ -109,7 +110,7 @@ export const Projects = () => {
               and it went pretty amazing.
             </p>
           </Project2>
-          <Project3>
+          <Project3 tiltReverse tiltMaxAngleX={8} tiltMaxAngleY={8}>
             <ProjectTitle>Smule's profile page</ProjectTitle>
             <p>
               This is a project that I single-handedly did at work. It's

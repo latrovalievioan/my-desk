@@ -2,8 +2,9 @@ import React, {FormEvent} from 'react';
 import { Section } from '../styled/Section';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
+import Tilt from 'react-parallax-tilt';
 
-const Card = styled.div`
+const Card = styled(Tilt)`
   background: linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%);
   backdrop-filter: blur(10px);
   border-radius: 60px;
@@ -94,7 +95,7 @@ export const Contacts = ({ ...props }, ref: any) => {
     <Section>
       <ContentStack>
         <h1>CONTACT ME</h1>
-        <Card>
+        <Card tiltReverse tiltMaxAngleX={6} tiltMaxAngleY={6}>
           <CardTitle>Don't be shy...</CardTitle>
           <form ref={form} onSubmit={sendEmail}>
             <label>Your Name</label>
