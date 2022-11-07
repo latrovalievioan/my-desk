@@ -2,7 +2,6 @@ import styled from "styled-components"
 import Cv from '../assets/Cv';
 import GitHub from '../assets/GitHub';
 import LinkedIn from '../assets/LinkedIn';
-import Tilt from 'react-parallax-tilt';
 
 const Wrapper = styled.div`
 background: -moz-linear-gradient(138deg, rgba(42,38,227,1) 0%, rgba(237,141,98,1) 48%, rgba(187,25,104,1) 100%);
@@ -20,7 +19,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2a26e3",endCo
   text-align: center;
 `;
 
-const ImageWrapper = styled(Tilt)`
+const ImageWrapper = styled.div`
   background-image: url('/profile.jpeg');
   width: 100px;
   height: 100px;
@@ -43,15 +42,15 @@ const Link = styled.a`
 export const Mobile = () => {
   return (
     <Wrapper>
-      <ImageWrapper perspective={200} gyroscope />
+      <ImageWrapper/>
       <h5>Ioan Latrovaliev</h5>
-      <h6>Web Engineer</h6>
+      <h6>Web Developer</h6>
       <IconsWrapper>
         <Cv />
-        <Link href="https://github.com/latrovalievioan" target="_blank">
+        <Link href="https://github.com/latrovalievioan">
           <GitHub />
         </Link>
-        <Link href="https://www.linkedin.com/in/latrovalievioan/" target="_blank">
+        <Link href="https://www.linkedin.com/in/latrovalievioan/">
           <LinkedIn />
         </Link>
       </IconsWrapper>
