@@ -35,10 +35,6 @@ const IconsWrapper = styled.div`
   margin: 50px;
 `;
 
-const Link = styled.a`
-  cursor: pointer;
-`;
-
 export const Mobile = () => {
   return (
     <Wrapper>
@@ -47,12 +43,12 @@ export const Mobile = () => {
       <h6>Web Developer</h6>
       <IconsWrapper>
         <Cv />
-        <Link href="https://github.com/latrovalievioan">
+        <a href="https://github.com/latrovalievioan">
           <GitHub />
-        </Link>
-        <Link href="https://www.linkedin.com/in/latrovalievioan/">
+        </a>
+        <a href="https://www.linkedin.com/in/latrovalievioan/">
           <LinkedIn />
-        </Link>
+        </a>
       </IconsWrapper>
       <h6>Visit the page on a larger screen for the best experience.</h6>
     </Wrapper>
