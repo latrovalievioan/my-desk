@@ -43,12 +43,12 @@ export const Mobile = () => {
       <h6>Web Developer</h6>
       <IconsWrapper>
         <Cv />
-        <a href="https://github.com/latrovalievioan">
+        <div onClick={() => window.location.href = "https://github.com/latrovalievioan" }>
           <GitHub />
-        </a>
-        <a href="https://www.linkedin.com/in/latrovalievioan/">
+        </div>
+        <div onClick={() => window.location.href = "https://www.linkedin.com/in/latrovalievioan/"}>
           <LinkedIn />
-        </a>
+        </div>
       </IconsWrapper>
       <h6>Visit the page on a larger screen for the best experience.</h6>
     </Wrapper>
