@@ -4,6 +4,7 @@ import Overlay from './Overlay';
 import { Model } from './Desk';
 import { GlobalStyles } from './GlobalStyles';
 import { useIsDesktop } from './utils';
+import { Mobile } from './sections/Mobile';
 
 function App() {
   const [haveAssetsLoaded, setHaveAssetsLoaded] = React.useState(false);
@@ -13,8 +14,7 @@ function App() {
   const overlay = React.useRef();
   const scroll = React.useRef(0);
 
-  return isDesktop 
-    ? (
+  return isDesktop ? (
     <>
       <GlobalStyles />
       <Canvas
@@ -34,8 +34,12 @@ function App() {
         haveAssetsLoaded={haveAssetsLoaded}
       />
     </>
-    )
-    : <div>HELLO</div>
+  ) : (
+    <>
+      <GlobalStyles />
+      <Mobile />
+    </>
+  );
 }
 
 export default App;

@@ -62,6 +62,13 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  h6 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+  }
+
   p {
     font-weight: 300;
     font-size: 17px;
