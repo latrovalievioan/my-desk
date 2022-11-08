@@ -1,57 +1,142 @@
 import styled from 'styled-components';
 import { Section } from '../styled/Section';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import Star from '../assets/Star';
+import Study from '../assets/Study';
 
-const ContentStack = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const SkillsCard = styled.div`
-  background: linear-gradient(
-    90deg,
-    rgba(41, 163, 232, 0.4) 0%,
-    rgba(104, 215, 94, 0.4) 100%
-  );
-  backdrop-filter: blur(10px);
-  border-radius: 60px;
-  padding: 30px 40px 30px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1000px;
-`;
-
-const SkillTitle = styled.h3`
-  border-bottom: 3px solid white;
+const ExtendedSection = styled(Section)`
+  height: 200vh;
 `;
 
 export const Skills = () => {
   return (
-    <Section>
-      <ContentStack>
-        <h1>SKILLS</h1>
-        <SkillsCard>
-          <SkillTitle>Front-end</SkillTitle>
-          <p>
-            As a front-end developer, I am pretty proficient in <b>JavaScript</b>,
-            <b> HTML5</b>, and <b>CSS</b>. I have been in love with <b>TypeScript </b>ever since I
-            discovered it. It's a pleasure to have static types! I am a <b>React </b>
-            fan and try to learn more about it every day.
-          </p>
-          <SkillTitle>Version control</SkillTitle>
-          <p>
-            I am very knowledgeable about <b>Git</b>. And my branches are never a mess.
-            I'm comfortable rebasing, using the 'reflog', cherry-picking
-            commits, and anything you can think of. People often think of you as
-            a wizard if you are good at Git. So git gut at Git!
-          </p>
-          <SkillTitle>Back-end</SkillTitle>
-          <p>
-            Although it is not my prime field, I've written some back-end APIs.
-            My knowledge of <b>NestJS </b>and <b>Ruby on Rails</b> is relatively good.
-          </p>
-        </SkillsCard>
-      </ContentStack>
-    </Section>
+    <ExtendedSection>
+      <h1>EXPERIENCE & EDUCATION</h1>
+      <VerticalTimeline animate>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="05/2020 - present"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Star />}
+        >
+          Started my developer journey.
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="05/2020 - 06/2020"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Study />}
+        >
+          Programming Fundamentals with Python @SoftUni.
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="06/2020"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Study />}
+        >
+          Started learning JavaScript, Html5, CSS and algorithms.
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="02/2021 - 05/2021"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Study />}
+        >
+          Game Development @Booost.
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="05/2021"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Study />}
+        >
+          Started learning React, Redux and Typescript.
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="08/2021 - present"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Star />}
+        >
+          Landed my first job as a web developer @Smule Inc.
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            color: 'white',
+            borderRadius: '50px',
+            background:
+              'linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'none',
+          }}
+          date="10/2021 - 12/2021"
+          iconStyle={{ background: 'black', color: '#fff' }}
+          icon={<Study />}
+        >
+          The Complete Junior to Senior Web Developer Roadmap @Zero To Mastery Academy.
+        </VerticalTimelineElement>
+      </VerticalTimeline>
+    </ExtendedSection>
   );
 };
