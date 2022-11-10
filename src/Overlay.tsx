@@ -7,6 +7,7 @@ import { Skills } from './sections/Skills';
 import { LoadingBar } from './LoadingBar';
 import { Contacts } from './sections/Contacts';
 import { Icons } from './Icons';
+import {Experience} from './sections/Experience';
 
 const Overlay = forwardRef(
   (
@@ -30,6 +31,7 @@ const Overlay = forwardRef(
             <Icons />
             <Home ref={scrollHelperRef} />
             <About />
+            <Experience />
             <Skills />
             <Projects />
             <Contacts />

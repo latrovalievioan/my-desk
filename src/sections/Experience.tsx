@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import React from 'react';
+import {Section} from '../styled/Section';
 
 const TimelineWrapper = styled.div`
   max-width: 1200px;
   display: flex;
+  margin-top: 70px;
 `;
 
 const TimelineColumn = styled.div<{border: 'right' | 'left'}>`
@@ -82,7 +84,7 @@ const DateText = styled.p`
   padding: 8px;
 `;
 
-export const Timeline = () => {
+export const Experience = () => {
   const arr = [
     {
       text: 'Started my developer journey.',
@@ -176,13 +178,16 @@ export const Timeline = () => {
   })
 
   return (
-    <TimelineWrapper>
-      <TimelineColumn border='right'>
-        {leftItems}
-      </TimelineColumn>
-      <TimelineColumn border='left'>
-        {rightItems}
-      </TimelineColumn>
-    </TimelineWrapper>
+    <Section>
+      <h1>EXPERIENCE & EDUCATION</h1>
+      <TimelineWrapper>
+        <TimelineColumn border='right'>
+          {leftItems}
+        </TimelineColumn>
+        <TimelineColumn border='left'>
+          {rightItems}
+        </TimelineColumn>
+      </TimelineWrapper>
+    </Section>
   );
 };
