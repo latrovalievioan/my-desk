@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 
 const TimelineWrapper = styled.div`
   max-width: 1200px;
@@ -13,13 +14,15 @@ const TimelineColumn = styled.div<{border: 'right' | 'left'}>`
   ${({ border }) => 'border-' + border + ': 1px solid white;'}
 `;
 
-const TimelineCell = styled.div<{justify?: 'start' | 'end'}>`
+const TimelineCell = styled.div<{justify: 'start' | 'end', isVisible: boolean}>`
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: ${({ justify }) => justify ? 'flex-' + justify : 'center'};
   align-items: center;
   gap: 10px;
+  opacity: ${({ isVisible }) => isVisible ? '1' : '0'};
+  transition: 0.7s;
 `;
 
 const TimelineItem = styled.div`
@@ -112,18 +115,40 @@ export const Timeline = () => {
   ]
 
   let leftItems:any[] = [];
+
   let rightItems:any[] = [];
 
   arr.forEach((el, i) => {
+    const leftRef = React.useRef<any>(null);
+    const rightRef = React.useRef<any>(null);
+
+    const [isVisible, setIsVisible] = React.useState<boolean>(false);
+
+    const callback = (entries: any[]) => {
+      const [entry] = entries;
+      setIsVisible(entry.isIntersecting)
+    }
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0,
+    }
+
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(callback, options);
+      if(leftRef.current) observer.observe(leftRef.current);
+    }, [leftRef, options])
+
     if(i % 2 === 0) {
       leftItems.push(
-        <TimelineCell>
+        <TimelineCell justify='end' ref={leftRef} key={`left${i}`} isVisible={isVisible}>
           <TimelineItem>{el.text}</TimelineItem>
           <Arrow pseudoPosition='right'/>
         </TimelineCell>
       );
       rightItems.push(
-        <TimelineCell justify='start'>
+        <TimelineCell ref={rightRef} justify='start' key={`right${i}`} isVisible={true}>
           <Date>
             <DateText>
               {el.date}
@@ -133,7 +158,7 @@ export const Timeline = () => {
       );
     } else {
       leftItems.push(
-        <TimelineCell justify='end'>
+        <TimelineCell ref={leftRef} justify='end' key={`left${i}`} isVisible={true}>
           <Date>
             <DateText>
               {el.date}
@@ -142,7 +167,7 @@ export const Timeline = () => {
         </TimelineCell>
       );
       rightItems.push(
-        <TimelineCell>
+        <TimelineCell justify='start' ref={rightRef} key={`right${i}`} isVisible={isVisible}>
           <Arrow pseudoPosition='left'/>
           <TimelineItem>{el.text}</TimelineItem>
         </TimelineCell>

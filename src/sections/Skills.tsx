@@ -9,7 +9,7 @@ const ExtendedSection = styled(Section)`
 export const Skills = () => {
   return (
     <ExtendedSection>
-      <Timeline></Timeline>
+      <Timeline/>
     </ExtendedSection>
   );
 };
