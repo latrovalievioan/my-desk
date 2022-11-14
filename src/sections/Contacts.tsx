@@ -5,7 +5,10 @@ import styled from 'styled-components';
 import Tilt from 'react-parallax-tilt';
 
 const Card = styled(Tilt)`
-  background: linear-gradient(90deg, rgba(116, 205, 255, 0.6) 0%, rgba(255, 200, 58, 0.6) 100%);
+  background: rgba(61,61,91, 0.6);
+  background: -moz-linear-gradient(135deg, rgba(61,61,91,0.5) 0%, rgba(73,115,126,0.5) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(61,61,91,0.5) 0%, rgba(73,115,126,0.5) 100%);
+  background: linear-gradient(135deg, rgba(61,61,91,0.5) 0%, rgba(73,115,126,0.5) 100%);
   backdrop-filter: blur(10px);
   border-radius: 60px;
   padding: 50px;
@@ -59,7 +62,7 @@ const ContentStack = styled.div`
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background: rgb(249, 105, 14);
+      background: #5185DB;
       color: white;
       border: none;
       font-size: 20px;

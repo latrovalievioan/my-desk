@@ -33,11 +33,10 @@ const TimelineItem = styled.div`
   text-align: center;
   align-items: center;
   border-radius: 50px;
-  background: linear-gradient(
-    90deg,
-    rgba(116, 205, 255, 0.6) 0%,
-    rgba(255, 200, 58, 0.6) 100%
-  );
+  background: rgb(41,59,98);
+  // background: -moz-linear-gradient(90deg, rgba(41,59,98,1) 0%, rgba(73,59,88,1) 100%);
+  // background: -webkit-linear-gradient(90deg, rgba(41,59,98,1) 0%, rgba(73,59,88,1) 100%);
+  background: linear-gradient(90deg, rgba(41,59,98,0.6) 0%, rgba(73,59,88,0.6) 100%);
   backdrop-filter: blur(10px);
   width: 600px;
   padding: 23px;

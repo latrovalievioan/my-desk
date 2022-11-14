@@ -23,27 +23,24 @@ const Card = styled(Tilt)`
 `;
 
 const Project1 = styled(Card)`
-  background: linear-gradient(
-    90deg,
-    rgba(41, 95, 232, 0.4) 0%,
-    rgba(94, 215, 149, 0.4) 100%
-  );
+  background: rgba(159,93,106, 0.6);
+  background: -moz-linear-gradient(100deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
+  background: -webkit-linear-gradient(100deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
+  background: linear-gradient(100deg, rgba(159,93,106,0.6) 0%, rgba(69,116,164,0.6) 100%);
 `;
 
 const Project2 = styled(Card)`
-  background: linear-gradient(
-    180deg,
-    rgba(153, 127, 62, 0.6) 0%,
-    rgba(208, 59, 113, 0.6) 100%
-  );
+  background: rgba(159,93,106, 0.6);
+  background: -moz-linear-gradient(0deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
+  background: linear-gradient(0deg, rgba(159,93,106,0.6) 0%, rgba(69,116,164,0.6) 100%);
 `;
 
 const Project3 = styled(Card)`
-  background: linear-gradient(
-    180deg,
-    rgba(153, 127, 62, 0.6) 0%,
-    rgba(208, 59, 113, 0.6) 100%
-  );
+  background: rgba(159,93,106, 0.6);
+  background: -moz-linear-gradient(275deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
+  background: -webkit-linear-gradient(275deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
+  background: linear-gradient(275deg, rgba(159,93,106,0.6) 0%, rgba(69,116,164,0.6) 100%);
 `;
 
 const ProjectTitle = styled.h3`
@@ -54,8 +51,7 @@ const ProjectTitle = styled.h3`
 `;
 
 const Button = styled.a`
-  background: rgba(249, 105, 14, 0.8);
-  backdrop-filter: blur(13.9919px);
+  background: #5185DB;
   border-radius: 47px;
   font-weight: 700;
   font-size: 20px;
@@ -72,7 +68,7 @@ const Button = styled.a`
 
   &:hover {
     transition: 0.5s;
-    background: rgba(0, 206, 158, 0.6);
+    background: rgba(0, 206, 158, 1);
   }
 `;
 
