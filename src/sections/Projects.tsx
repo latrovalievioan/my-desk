@@ -23,24 +23,60 @@ const Card = styled(Tilt)`
 `;
 
 const Project1 = styled(Card)`
-  background: rgba(159,93,106, 0.6);
-  background: -moz-linear-gradient(100deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
-  background: -webkit-linear-gradient(100deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
-  background: linear-gradient(100deg, rgba(159,93,106,0.6) 0%, rgba(69,116,164,0.6) 100%);
+  background: rgba(159, 93, 106, 0.6);
+  background: -moz-linear-gradient(
+    100deg,
+    rgba(159, 93, 106, 1) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
+  background: -webkit-linear-gradient(
+    100deg,
+    rgba(159, 93, 106, 1) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
+  background: linear-gradient(
+    100deg,
+    rgba(159, 93, 106, 0.6) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
 `;
 
 const Project2 = styled(Card)`
-  background: rgba(159,93,106, 0.6);
-  background: -moz-linear-gradient(0deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
-  background: linear-gradient(0deg, rgba(159,93,106,0.6) 0%, rgba(69,116,164,0.6) 100%);
+  background: rgba(159, 93, 106, 0.6);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(159, 93, 106, 1) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(159, 93, 106, 1) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(159, 93, 106, 0.6) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
 `;
 
 const Project3 = styled(Card)`
-  background: rgba(159,93,106, 0.6);
-  background: -moz-linear-gradient(275deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
-  background: -webkit-linear-gradient(275deg, rgba(159,93,106,1) 0%, rgba(69,116,164,0.6) 100%);
-  background: linear-gradient(275deg, rgba(159,93,106,0.6) 0%, rgba(69,116,164,0.6) 100%);
+  background: rgba(159, 93, 106, 0.6);
+  background: -moz-linear-gradient(
+    275deg,
+    rgba(159, 93, 106, 1) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
+  background: -webkit-linear-gradient(
+    275deg,
+    rgba(159, 93, 106, 1) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
+  background: linear-gradient(
+    275deg,
+    rgba(159, 93, 106, 0.6) 0%,
+    rgba(69, 116, 164, 0.6) 100%
+  );
 `;
 
 const ProjectTitle = styled.h3`
@@ -51,7 +87,7 @@ const ProjectTitle = styled.h3`
 `;
 
 const Button = styled.a`
-  background: #5185DB;
+  background: #5185db;
   border-radius: 47px;
   font-weight: 700;
   font-size: 20px;
@@ -95,9 +131,12 @@ export const Projects = () => {
               </ProjectLink>
             </ProjectTitle>
             <p>
-              This is the project that you are currently viewing. I took
-              inspiration from similar personal dev websites built with
-              THREE.js, so I was pretty excited to try it on my own.{' '}
+              This is the project that you are currently viewing. My very own
+              Frankenstein monster.
+            </p>
+            <p>
+              I took inspiration from similar personal dev websites built with
+              THREE.js, so I was pretty excited to try it on my own.
             </p>
             <p>
               I've used <b>React</b> with <b>TypeScript</b>,{' '}
@@ -128,10 +167,7 @@ export const Projects = () => {
           <Project3 tiltReverse tiltMaxAngleX={8} tiltMaxAngleY={8}>
             <ProjectTitle>
               Smule's profile page
-              <ProjectLink
-                href="https://www.smule.com/Disney"
-                target="_blank"
-              >
+              <ProjectLink href="https://www.smule.com/Disney" target="_blank">
                 <LinkIcon />
               </ProjectLink>
             </ProjectTitle>

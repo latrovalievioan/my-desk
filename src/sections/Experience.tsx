@@ -88,14 +88,14 @@ export const Experience = () => {
   const arr = [
     {
       text: 'Started my developer journey.',
-      date: '05/2020 - present'
+      date: '05/2020 - still learning'
     },
     {
       text: 'Programming Fundamentals with Python @SoftUni.',
       date: '05/2020 - 06/2020'
     },
     {
-      text: 'Started learning JavaScript, Html5, CSS and algorithms.',
+      text: 'Started working with JavaScript, Html5, CSS and learning data-structures and algorithms.',
       date: '06/2020'
     },
     {
@@ -103,7 +103,7 @@ export const Experience = () => {
       date: '02/2021 - 05/2021'
     },
     {
-      text: 'Started learning React, Redux and Typescript.',
+      text: 'Started working with React, Redux and Typescript.',
       date: '05/2021'
     },
     {
