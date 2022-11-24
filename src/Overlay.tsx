@@ -7,7 +7,8 @@ import { Skills } from './sections/Skills';
 import { LoadingBar } from './LoadingBar';
 import { Contacts } from './sections/Contacts';
 import { Icons } from './Icons';
-import {Experience} from './sections/Experience';
+import { Experience } from './sections/Experience';
+import { Credits } from './sections/Credits';
 
 const Overlay = forwardRef(
   (
@@ -35,11 +36,7 @@ const Overlay = forwardRef(
             <Skills />
             <Projects />
             <Contacts />
-            <div style={{ height: '100vh', border: '1px solid red' }}>
-              <div className="dot">
-                <h1>Credits</h1>
-              </div>
-            </div>
+            <Credits />
           </>
         ) : (
           <LoadingBar />
