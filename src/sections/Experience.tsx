@@ -20,6 +20,17 @@ const TimelineCell = styled.div<{
   justify: 'start' | 'end';
   isVisible: boolean;
 }>`
+  // performance
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  will-change: opacity;
+
   width: 100%;
   height: 100px;
   display: flex;
@@ -27,18 +38,28 @@ const TimelineCell = styled.div<{
   align-items: center;
   gap: 10px;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transition: 0.7s;
+  transition: 0.2s;
 `;
 
 const TimelineItem = styled.div`
+  // // performance
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   border-radius: 50px;
   background: rgb(41, 59, 98);
-  // background: -moz-linear-gradient(90deg, rgba(41,59,98,1) 0%, rgba(73,59,88,1) 100%);
-  // background: -webkit-linear-gradient(90deg, rgba(41,59,98,1) 0%, rgba(73,59,88,1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(41,59,98,1) 0%, rgba(73,59,88,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(41,59,98,1) 0%, rgba(73,59,88,1) 100%);
   background: linear-gradient(
     90deg,
     rgba(41, 59, 98, 0.6) 0%,
@@ -89,6 +110,8 @@ const DateText = styled.p`
   backdrop-filter: blur(10px);
   border-radius: 40px;
   padding: 8px;
+  transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
 `;
 
 const arr = [
@@ -132,7 +155,7 @@ const arr = [
 const options = {
   root: document.body,
   rootMargin: '20px',
-  threshold: 0,
+  threshold: 1.0,
 };
 
 export const Experience = () => {
@@ -144,12 +167,10 @@ export const Experience = () => {
   const [isVisible, setIsVisible] = React.useState<Record<string, boolean>>({});
 
   React.useEffect(() => {
-    console.log(1);
     const observer = new IntersectionObserver((entries) => {
       const x = Object.fromEntries(entries.map(e => [e.target.id, e.isIntersecting]))
-      setIsVisible(v => ({ ...v, ...x }))
+      requestAnimationFrame(() => setIsVisible(v => ({ ...v, ...x })))
     }, options);
-    observer.root.style.border = "2px solid #44aa44";
     Object.values(textsRef.current).forEach((el) => el && observer.observe(el));
 
     return () => observer.disconnect();

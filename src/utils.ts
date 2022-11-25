@@ -29,3 +29,14 @@ export const useIsDesktop = () => {
 
   return isDesktop;
 };
+
+export const throttle = <FN extends (...args: any[]) => any>(fn: FN, ms: number) => {
+  let pass = true
+
+  return (...args: Parameters<FN>): void => {
+    if (!pass) return
+    fn(...args)
+    pass = false
+    setTimeout(() => pass = true, ms)
+  }
+}

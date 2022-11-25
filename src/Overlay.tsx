@@ -16,17 +16,19 @@ const Overlay = forwardRef(
     ref: any
   ) => {
     const scrollHelperRef = React.useRef<any>();
+    const onScroll = React.useCallback(
+      (e: any) => {
+        console.log('scroll');
+        scroll.current =
+          e.target.scrollTop / (e.target.scrollHeight - window.innerHeight);
+        if (scrollHelperRef.current.getBoundingClientRect().y < 600)
+          scrollHelperRef.current.style.opacity = '0';
+        else scrollHelperRef.current.style.opacity = '1';
+      },
+      [scrollHelperRef]
+    );
     return (
-      <Scroll
-        ref={ref}
-        onScroll={(e: any) => {
-          scroll.current =
-            e.target.scrollTop / (e.target.scrollHeight - window.innerHeight);
-          if (scrollHelperRef.current.getBoundingClientRect().y < 600)
-            scrollHelperRef.current.style.opacity = '0';
-          else scrollHelperRef.current.style.opacity = '1';
-        }}
-      >
+      <Scroll ref={ref} onScroll={onScroll}>
         {haveAssetsLoaded ? (
           <>
             <Icons />

@@ -3,6 +3,16 @@ import { Section } from "../styled/Section"
 import Tilt from 'react-parallax-tilt';
 
 const Card = styled(Tilt)`
+  // performance
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+
   background: rgba(61,61,91, 0.6);
   background: -moz-linear-gradient(135deg, rgba(61,61,91,0.5) 0%, rgba(73,115,126,0.5) 100%);
   background: -webkit-linear-gradient(135deg, rgba(61,61,91,0.5) 0%, rgba(73,115,126,0.5) 100%);
