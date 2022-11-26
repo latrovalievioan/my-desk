@@ -20,7 +20,6 @@ const Card = styled(Tilt)`
   backdrop-filter: blur(10px);
   border-radius: 60px;
   padding: 50px;
-  width: 1100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +37,7 @@ const Credit = styled.div`
 
 const Subject = styled.div`
   text-align: right;
+  font-weight: bold;
   flex: 1;
 `
 
