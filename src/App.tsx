@@ -1,4 +1,4 @@
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 import Overlay from './Overlay';
 import { Model } from './Desk';
@@ -19,6 +19,7 @@ function App() {
       <GlobalStyles />
       <Canvas
         id="canvas-main"
+        dpr={window.devicePixelRatio * 0.9}
         onCreated={(state) => {
           if (!overlay.current || !state.events.connect) return;
           return state.events.connect(overlay.current);

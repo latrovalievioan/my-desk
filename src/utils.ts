@@ -2,10 +2,10 @@ import React from "react";
 
 export const useIsDesktop = () => {
 
-  const [isDesktop, setIsDesktop] = React.useState(window.matchMedia(`(min-width: 1356px)`).matches);
+  const [isDesktop, setIsDesktop] = React.useState(window.matchMedia(`(min-width: 1px)`).matches);
 
   React.useEffect(() => {
-    const mql = window.matchMedia(`(min-width: 1356px)`);
+    const mql = window.matchMedia(`(min-width: 1px)`);
 
     const handleChange = (e: any) => {
       setIsDesktop(e.matches);
@@ -29,3 +29,14 @@ export const useIsDesktop = () => {
 
   return isDesktop;
 };
+
+export const throttle = <FN extends (...args: any[]) => any>(fn: FN, ms: number) => {
+  let pass = true
+
+  return (...args: Parameters<FN>): void => {
+    if (!pass) return
+    fn(...args)
+    pass = false
+    setTimeout(() => pass = true, ms)
+  }
+}
