@@ -107,7 +107,6 @@ const Date = styled.div`
 
 const DateText = styled.p`
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
   border-radius: 40px;
   padding: 8px;
   transform: translate3d(0, 0, 0);
