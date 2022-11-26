@@ -104,8 +104,6 @@ type ActionName = 'CameraAction.001';
 type GLTFActions = Record<ActionName, THREE.AnimationAction>;
 
 export function Model({ scroll, ...props }: { scroll: any; setHaveAssetsLoaded: Dispatch<SetStateAction<boolean>> }) {
-  const count = React.useRef(0);
-  console.log(count.current++);
   const group = useRef<any>();
   const { nodes, materials, animations } = useGLTF('/desk1.glb') as GLTFResult;
   const { actions } = useAnimations<any>(animations, group);

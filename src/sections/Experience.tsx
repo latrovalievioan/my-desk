@@ -38,7 +38,7 @@ const TimelineCell = styled.div<{
   align-items: center;
   gap: 10px;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transition: 0.2s;
+  transition: 0.1s;
 `;
 
 const TimelineItem = styled.div`
