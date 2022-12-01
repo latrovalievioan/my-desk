@@ -18,7 +18,6 @@ const TimelineColumn = styled.div<{ border: 'right' | 'left' }>`
 
 const TimelineCell = styled.div<{
   justify: 'start' | 'end';
-  isVisible: boolean;
 }>`
   // performance
   -webkit-backface-visibility: hidden;
@@ -29,7 +28,6 @@ const TimelineCell = styled.div<{
   perspective: 1000;
   transform: translate3d(0,0,0);
   transform: translateZ(0);
-  will-change: opacity;
 
   width: 100%;
   height: 100px;
@@ -37,11 +35,11 @@ const TimelineCell = styled.div<{
   justify-content: ${({ justify }) => (justify ? 'flex-' + justify : 'center')};
   align-items: center;
   gap: 10px;
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transition: 0.1s;
 `;
 
-const TimelineItem = styled.div`
+const TimelineItem = styled.div<{
+  isVisible: boolean;
+}>`
   // // performance
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -51,6 +49,7 @@ const TimelineItem = styled.div`
   perspective: 1000;
   transform: translate3d(0,0,0);
   transform: translateZ(0);
+  will-change: opacity;
 
   display: flex;
   justify-content: center;
@@ -65,11 +64,13 @@ const TimelineItem = styled.div`
     rgba(41, 59, 98, 0.6) 0%,
     rgba(73, 59, 88, 0.6) 100%
   );
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   backdrop-filter: blur(10px);
   width: 600px;
   padding: 23px;
   font-weight: bold;
   font-size: 18px;
+  transition: 0.2s;
 `;
 
 const TimelineDate = styled.div`
@@ -153,7 +154,7 @@ const arr = [
 
 const options = {
   root: document.body,
-  rootMargin: '20px',
+  rootMargin: '0px',
   threshold: 1.0,
 };
 
@@ -183,9 +184,8 @@ export const Experience = () => {
           justify="end"
           ref={(x) => x && (textsRef.current[el.id] = x)}
           key={`left${i}`}
-          isVisible={isVisible[el.id]}
         >
-          <TimelineItem>{el.text}</TimelineItem>
+          <TimelineItem isVisible={isVisible[el.id]}>{el.text}</TimelineItem>
           <Arrow pseudoPosition="right" />
         </TimelineCell>
       );
@@ -193,7 +193,6 @@ export const Experience = () => {
         <TimelineCell
           justify="start"
           key={`right${i}`}
-          isVisible={true}
         >
           <Date>
             <DateText>{el.date}</DateText>
@@ -205,7 +204,6 @@ export const Experience = () => {
         <TimelineCell
           justify="end"
           key={`left${i}`}
-          isVisible={true}
         >
           <Date>
             <DateText>{el.date}</DateText>
@@ -218,10 +216,9 @@ export const Experience = () => {
           ref={x => x && (textsRef.current[el.id] = x)}
           justify="start"
           key={`right${i}`}
-          isVisible={isVisible[el.id]}
         >
           <Arrow pseudoPosition="left" />
-          <TimelineItem>{el.text}</TimelineItem>
+          <TimelineItem isVisible={isVisible[el.id]}>{el.text}</TimelineItem>
         </TimelineCell>
       );
     }
