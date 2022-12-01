@@ -93,7 +93,6 @@ const ProjectTitle = styled.h3`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 3px solid white;
 `;
 
 const Button = styled.a`

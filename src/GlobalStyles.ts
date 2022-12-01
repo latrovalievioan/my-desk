@@ -38,7 +38,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   h2 {
     font-weight: 800;
-    font-size: 45px;
+    font-size: 40px;
     margin: 0;
   }
   

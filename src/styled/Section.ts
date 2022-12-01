@@ -9,6 +9,5 @@ export const Section = styled.section`
   width: 100%;
   padding: 50px;
   position: relative;
-  // border: 1px solid yellow;
   justify-content: center;
 `;

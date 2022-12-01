@@ -10,7 +10,7 @@ const TitleStack = styled.div`
   text-align: right;
   align-items: flex-start;
   margin-bottom: 250px;
-  line-height: 20px;
+  line-height: 35px;
 `;
 
 export const Home = forwardRef(({ ...props }, ref: any) => {

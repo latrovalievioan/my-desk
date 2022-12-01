@@ -31,19 +31,15 @@ const ContentStack = styled.div`
   gap: 20px;
 `;
 
-const CardTitle = styled.h2`
-  border-bottom: 3px solid white;
-`;
-
 export const About = () => {
   return (
     <Section>
       <ContentStack>
         <h1>ABOUT</h1>
         <Card tiltReverse tiltMaxAngleX={6} tiltMaxAngleY={6}>
-            <CardTitle>
+            <h2>
               Hello, my name is <br/> Ioan Latrovaliev{' '}
-            </CardTitle>
+            </h2>
           <p>
             I'm a 26-year-old web developer who enjoys creating unique and value-packed websites.
           </p>

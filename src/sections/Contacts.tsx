@@ -85,10 +85,6 @@ const ContentStack = styled.div`
   }
 `;
 
-const CardTitle = styled.h2`
-  border-bottom: 3px solid white;
-`;
-
 export const Contacts = ({ ...props }, ref: any) => {
   const form = React.useRef<any>();
 
@@ -109,7 +105,7 @@ export const Contacts = ({ ...props }, ref: any) => {
       <ContentStack>
         <h1>CONTACT ME</h1>
         <Card tiltReverse tiltMaxAngleX={6} tiltMaxAngleY={6}>
-          <CardTitle>Don't be shy...</CardTitle>
+          <h2>Don't be shy...</h2>
           <form ref={form} onSubmit={sendEmail}>
             <label>Your Name</label>
             <input type="text" name="user_name" />

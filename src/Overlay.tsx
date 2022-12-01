@@ -18,10 +18,9 @@ const Overlay = forwardRef(
     const scrollHelperRef = React.useRef<any>();
     const onScroll = React.useCallback(
       (e: any) => {
-        console.log('scroll');
         scroll.current =
           e.target.scrollTop / (e.target.scrollHeight - window.innerHeight);
-        if (scrollHelperRef.current.getBoundingClientRect().y < 600)
+        if (scrollHelperRef.current.getBoundingClientRect().y < window.innerHeight * 0.8)
           scrollHelperRef.current.style.opacity = '0';
         else scrollHelperRef.current.style.opacity = '1';
       },
