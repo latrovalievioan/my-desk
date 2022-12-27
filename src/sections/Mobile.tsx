@@ -13,16 +13,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2a26e3",endCo
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 20px;
   text-align: center;
 `;
 
 const ImageWrapper = styled.div`
   background-image: url('/profile.jpeg');
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   background-size: cover;
   border-radius: 50%;
 `;
