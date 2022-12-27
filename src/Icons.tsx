@@ -22,7 +22,9 @@ const Link = styled.a`
 export const Icons = () => {
   return (
     <Stack>
-      <Cv />
+      <Link href="/IoanLatrovalievResume.pdf" target="_blank">
+        <Cv />
+      </Link>
       <Link href="https://github.com/latrovalievioan" target="_blank">
         <GitHub />
       </Link>

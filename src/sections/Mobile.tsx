@@ -42,13 +42,15 @@ export const Mobile = () => {
       <h5>Ioan Latrovaliev</h5>
       <h6>Web Developer</h6>
       <IconsWrapper>
+      <a href="/IoanLatrovalievResume.pdf" target="_blank">
         <Cv />
-        <div onClick={() => window.location.href = "https://github.com/latrovalievioan" }>
-          <GitHub />
-        </div>
-        <div onClick={() => window.location.href = "https://www.linkedin.com/in/latrovalievioan/"}>
-          <LinkedIn />
-        </div>
+      </a>
+      <a href="https://github.com/latrovalievioan" target="_blank">
+        <GitHub />
+      </a>
+      <a href="https://www.linkedin.com/in/latrovalievioan/" target="_blank">
+        <LinkedIn />
+      </a>
       </IconsWrapper>
       <h6>Visit the page on a larger screen for the best experience.</h6>
     </Wrapper>
