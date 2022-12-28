@@ -35,6 +35,9 @@ const Card = styled(Tilt)`
   border-radius: 60px;
   padding: 50px;
   width: 700px;
+  @media (max-width: 1300px) {
+    width: 600px;
+  }
 `;
 
 const ContentStack = styled.div<{
@@ -50,6 +53,10 @@ const ContentStack = styled.div<{
   align-items: flex-start;
   margin-left: 600px;
   gap: 20px;
+
+  @media (max-width: 1300px) {
+    margin-left: 500px;
+  }
 
   form {
     display: flex;

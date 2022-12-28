@@ -71,6 +71,10 @@ const TimelineItem = styled.div<{
   font-weight: bold;
   font-size: 18px;
   transition: 0.2s;
+
+  @media (max-width: 1200px) {
+    width: 400px;
+  }
 `;
 
 const TimelineDate = styled.div`

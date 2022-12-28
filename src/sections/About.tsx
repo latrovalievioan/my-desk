@@ -20,7 +20,7 @@ const Card = styled(Tilt)`
   backdrop-filter: blur(10px);
   border-radius: 60px;
   padding: 50px;
-  width: 700px;
+  max-width: 700px;
 `;
 
 const ContentStack = styled.div`
@@ -29,6 +29,10 @@ const ContentStack = styled.div`
   align-items: flex-start;
   margin-left: 400px;
   gap: 20px;
+
+  @media (max-width: 1200px) {
+    margin-left: 300px;
+  }
 `;
 
 export const About = () => {

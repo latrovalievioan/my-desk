@@ -7,6 +7,9 @@ const ContentStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @media (max-width: 1300px) {
+    width: 95%;
+  }
 `;
 
 const CardsCluster = styled.div`

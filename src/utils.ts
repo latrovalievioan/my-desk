@@ -2,10 +2,10 @@ import React from "react";
 
 export const useIsDesktop = () => {
 
-  const [isDesktop, setIsDesktop] = React.useState(window.matchMedia(`(min-width: 1375px)`).matches);
+  const [isDesktop, setIsDesktop] = React.useState(window.matchMedia(`(min-width: 1100px)`).matches);
 
   React.useEffect(() => {
-    const mql = window.matchMedia(`(min-width: 1375px)`);
+    const mql = window.matchMedia(`(min-width: 1100px)`);
 
     const handleChange = (e: any) => {
       setIsDesktop(e.matches);

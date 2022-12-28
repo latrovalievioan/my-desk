@@ -47,6 +47,11 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 25px;
     line-height: 40px;
     margin: 0;
+
+    @media (max-width: 1300px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   h4 {
