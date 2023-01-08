@@ -20,6 +20,13 @@ const Row = styled.div`
   gap: 16px;
 `;
 
+const Technology = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 const Wrapper = styled(Tilt)`
   // performance
   -webkit-backface-visibility: hidden;
@@ -49,21 +56,60 @@ export const Skills = () => {
       <h1>TOOLS & TECH-STACK</h1>
       <Wrapper tiltReverse tiltMaxAngleX={6} tiltMaxAngleY={6}>
         <Row>
-          <TypescriptIcon />
-          <ReactIcon />
-          <NestIcon />
-          <ReduxIcon />
-          <StyledIcon />
-          <WebpackIcon/>
-          <GitIcon />
+          <Technology>
+            <TypescriptIcon />
+            TypeScript
+          </Technology>
+          <Technology>
+            <ReactIcon />
+            React
+          </Technology>
+          <Technology>
+            <NestIcon />
+            NestJS
+          </Technology>
+          <Technology>
+            <ReduxIcon />
+            Redux
+          </Technology>
+          <Technology>
+            <StyledIcon />
+            Styled-Components
+          </Technology>
+          <Technology>
+            <WebpackIcon/>
+            Webpack
+          </Technology>
+          <Technology>
+            <GitIcon />
+            Git
+          </Technology>
         </Row>
         <Row>
-          <JavaScriptIcon />
-          <HtmlIcon />
-          <CssIcon />
-          <NodeIcon />
-          <JiraIcon />
-          <FigmaIcon />
+          <Technology>
+            <JavaScriptIcon />
+            JavaScript
+          </Technology>
+          <Technology>
+            <HtmlIcon />
+            Html5
+          </Technology>
+          <Technology>
+            <CssIcon />
+            CSS3
+          </Technology>
+          <Technology>
+            <NodeIcon />
+            Node.js
+          </Technology>
+          <Technology>
+            <JiraIcon />
+            Jira
+          </Technology>
+          <Technology>
+            <FigmaIcon />
+            Figma
+          </Technology>
         </Row>
       </Wrapper>
     </Section>
