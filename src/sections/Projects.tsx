@@ -167,8 +167,7 @@ export const Projects = () => {
               </ProjectLink>
             </ProjectTitle>
             <p>
-              This project is a space for experiments with <b>TypeScript</b>
-              's type system. It's a pretty weird concept to grasp, but It's
+              This project is a <b>Typescript</b> metaprogramming attempt of mine. It's a pretty weird concept to grasp, but It's
               something like functional programming only using types.
             </p>
             <p>
@@ -184,13 +183,10 @@ export const Projects = () => {
               </ProjectLink>
             </ProjectTitle>
             <p>
-              This is a project that I single-handedly did at work. It's Smule's
-              website profile page.
+              Migrating big features from a legacy codebase (<b>Ruby on Rails</b> + <b>Javascript</b>) to a modern (<b>NestJS</b> + <b>Typescript</b> + <b>React</b>) is big part of my job at Smule.
             </p>
             <p>
-              This was one of my first big real-world challenges, and I learned
-              a lot about <b>React</b>, <b>Redux</b>, and{' '}
-              <b>Styled Components</b> in the process.
+Building new endpoints on the backend, implementing new UI and managing large data transformations and state management were some of the challanges I've faced during this migrations.
             </p>
           </Project3>
         </CardsCluster>

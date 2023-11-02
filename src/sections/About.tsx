@@ -42,10 +42,10 @@ export const About = () => {
         <h1>ABOUT</h1>
         <Card tiltReverse tiltMaxAngleX={6} tiltMaxAngleY={6}>
             <h2>
-              Hello, my name is <br/> Ioan Latrovaliev{' '}
+              Hello, my name is <br/> Ioan Latrovaliev
             </h2>
           <p>
-            I'm a 26-year-old web developer who enjoys creating unique and value-packed websites.
+            I'm a 27-year-old web developer who enjoys creating unique and value-packed websites.
           </p>
           <p>
             I'm a developer who loves to learn and experiment. Despite my
