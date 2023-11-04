@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Section } from '../styled/Section';
-import Tilt from 'react-parallax-tilt';
-import LinkIcon from '../assets/Link';
+import styled from "styled-components";
+import { Section } from "../styled/Section";
+import Tilt from "react-parallax-tilt";
+import LinkIcon from "../assets/Link";
 
 const ContentStack = styled.div`
   display: flex;
@@ -22,11 +22,11 @@ const Card = styled(Tilt)`
   // performance
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   transform: translateZ(0);
 
   backdrop-filter: blur(10px);
@@ -151,7 +151,7 @@ export const Projects = () => {
               THREE.js, so I was pretty excited to try it on my own.
             </p>
             <p>
-              I've used <b>React</b> with <b>TypeScript</b>,{' '}
+              I've used <b>React</b> with <b>TypeScript</b>,{" "}
               <b>Styled Components</b>, and <b>React three fiber</b>. I've had
               to learn some basic <b>Blender</b> for the models too.
             </p>
@@ -167,8 +167,9 @@ export const Projects = () => {
               </ProjectLink>
             </ProjectTitle>
             <p>
-              This project is a <b>Typescript</b> metaprogramming attempt of mine. It's a pretty weird concept to grasp, but It's
-              something like functional programming only using types.
+              This project is a <b>Typescript</b> metaprogramming attempt of
+              mine. It's a pretty weird concept to grasp, but It's something
+              like functional programming only using types.
             </p>
             <p>
               I did a presentation on the concept at a tech meeting, and it went
@@ -183,10 +184,15 @@ export const Projects = () => {
               </ProjectLink>
             </ProjectTitle>
             <p>
-              Migrating big features from a legacy codebase (<b>Ruby on Rails</b> + <b>Javascript</b>) to a modern (<b>NestJS</b> + <b>Typescript</b> + <b>React</b>) is big part of my job at Smule.
+              Migrating big features from a legacy codebase (
+              <b>Ruby on Rails</b> + <b>Javascript</b>) to a modern (
+              <b>NestJS</b> + <b>Typescript</b> + <b>React</b>) is big part of
+              my job at Smule.
             </p>
             <p>
-Building new endpoints on the backend, implementing new UI and managing large data transformations and state management were some of the challanges I've faced during this migrations.
+              Building new endpoints on the backend, implementing new UI and
+              managing large data transformations and state management were some
+              of the challanges I've faced during this migrations.
             </p>
           </Project3>
         </CardsCluster>
